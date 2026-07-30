@@ -1,0 +1,20 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.EastSoutheastAsianMathCanonicalLaneLean.SemisimpleAlgebra
+import HautevilleHouse.EastSoutheastAsianMathCanonicalLaneLean.CharactersAndInduction
+import HautevilleHouse.EastSoutheastAsianMathCanonicalLaneLean.BrauerGroup
+import HautevilleHouse.EastSoutheastAsianMathCanonicalLaneLean.ModularRepresentationTheory
+import HautevilleHouse.EastSoutheastAsianMathCanonicalLaneLean.RootSystem
+import HautevilleHouse.EastSoutheastAsianMathCanonicalLaneLean.HeckeAlgebra
+
+namespace HautevilleHouse
+namespace EastSoutheastAsianMathCanonicalLaneLean
+
+def ConstrainedEastSoutheastAsianClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_east_southeast_asian_endgame (A : AdmissibleClass) :
+    ConstrainedEastSoutheastAsianClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end EastSoutheastAsianMathCanonicalLaneLean
+end HautevilleHouse
